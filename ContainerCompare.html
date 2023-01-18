@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jolf</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  <!--   <script src="funcs.js"></script>
+    <script src="courses.js"></script>
+</head> -->
+
+<body> 
+     <h4 align='center'>  Supplier1 : Enterphil Container Smartfab          - Supplier2 : <a href='https://cubo.ph/products/'>Cuboph </a>  </h4>
+<table id="comparisonTable">
+  <tr>
+    <th>Supplier|</th>
+    <th>Container Cost|</th>
+    <th>Additional Costs|</th>
+    <th>Delivery Fees|</th>
+     <th># of Container|</th>
+    <th>Type</th>
+    <th>Size</th>
+    <th>Location</th>
+    <th>Delivery Date</th>
+
+  </tr>
+  <tr>
+    <td>Supplier 1</td>
+    <td id="supplier1ContainerCost">P195,000</td>
+    <td id="supplier1AdditionalCosts">P40,000 CR</td>
+    <td id="supplier1DeliveryFees">P30000</td>
+    <td id="QTY">1</td>
+    <td id="QTY">prefab</td>
+    <td id="QTY">20 foot</td>
+    <td id="QTY">Lipa</td>
+    <td id="Date1">2 weeks</td>
+  </tr>
+  <tr>
+    <td>Supplier 2</td>
+    <td id="supplier2ContainerCost">P699,000</td>
+    <td id="supplier2AdditionalCosts"> 45000 Foundation</td>
+    <td id="supplier2DeliveryFees">P30000</td>
+    <td id="QTY">1</td>
+    <td id="QTY">prefab </td>
+    <td id="QTY">20 sqm</td>
+    <td id="QTY">Lipa</td>
+    <td id="Date2">8 weeks </td>
+  </tr>
+</table>
+
+<h2>  Customization </h2>
+<table id="comparisonTable">
+  <tr>
+    <th>Supplier</th>
+    <th>Description Modifications Inclusion</th>
+
+  </tr>
+  <tr>
+    <td>Enterphil Container</td>
+    <td id="supplier1ContainerCost">P195,000</td>
+    <td id="Description">Insulated walls, Insulated roofing, 1 steel door,
+      2 windows, Circuit breaker, led
+      lights, Switches, Sockets
+      Dimensions: 3m (W) x 6m (L) x2.8m (H)
+   </td>
+   
+  </tr>
+  <tr>
+    <td>Cubo Ph</td>
+    <td id="supplier2ContainerCost">P699,000</td>
+    <td id="Description">Fully Tiled Floor and Walls, Modern Water Closet, Art Basin,
+     Floating Countertop, Walk-in Shower KITCHEN Loft Bedroom
+          1.9 m Floating Countertop
+   </td>
+  </tr>
+
+ </table> 
+
+<script>
+  function comparePrices() {
+    var supplier1ContainerCost = document.getElementById("supplier1ContainerCost").innerHTML;
+    var supplier2ContainerCost = document.getElementById("supplier2ContainerCost").innerHTML;
+    if (supplier1ContainerCost !== supplier2ContainerCost) {
+      document.getElementById("supplier1ContainerCost").style.backgroundColor = "red";
+      document.getElementById("supplier2ContainerCost").style.backgroundColor = "red";
+    }
+
+    var supplier1AdditionalCosts = document.getElementById("supplier1AdditionalCosts").innerHTML;
+    var supplier2AdditionalCosts = document.getElementById("supplier2AdditionalCosts").innerHTML;
+    if (supplier1AdditionalCosts !== supplier2AdditionalCosts) {
+      document.getElementById("supplier1AdditionalCosts").style.backgroundColor = "red";
+      document.getElementById("supplier2AdditionalCosts").style.backgroundColor = "red";
+    }
+
+    var supplier1DeliveryFees = document.getElementById("supplier1DeliveryFees").innerHTML;
+    var supplier2DeliveryFees = document.getElementById("supplier2DeliveryFees").innerHTML;
+    if (supplier1DeliveryFees !== supplier2DeliveryFees) {
+      document.getElementById("supplier1DeliveryFees").style.backgroundColor = "red";
+      document.getElementById("supplier2DeliveryFees").style.backgroundColor = "red";
+    }
+    var supplier1ContainerCost = document.getElementById("Date1").innerHTML;
+    var supplier2ContainerCost = document.getElementById("Date2").innerHTML;
+    if (supplier1ContainerCost !== supplier2ContainerCost) {
+      document.getElementById("supplier1ContainerCost").style.backgroundColor = "blue";
+      document.getElementById("supplier2ContainerCost").style.backgroundColor = "blue";
+    }
+  }
+  comparePrices();
+</script>
+</body>
+
+</html>
